@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table class="table table-dark table-striped">
+        <tr>
+            <th colspan="6">All Car</th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Category</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th><a href="/addcar">Add new Car</a></th>
+        </tr>
+        {{#each cars}}
+        <tr>
+                <th>{{ name }}</th>
+                <th>{{ quantity }}</th>
+                <th>{{ category }}</th>
+                {{!-- <th>{{ category }}</th> --}}
+                <th><img src="{{image}}" height="200" width="200"></th>
+                <th>{{ price }}</th>
+                <th><a href="/delete/{{_id}}">Delete</a></th>
+        </tr>
+        {{/each}}
+    </table>
+</body>
+</html>
